@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Kavivanar&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 80vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	margin-top: 15%;
+	border-bottom: 7px solid #343434;
+}
+
+h1 {
+	font-family: "Kavivanar";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 38px;
+	line-height: 100%;
+	letter-spacing: 7%;
+	text-align: center;
+	vertical-align: middle;
+	align-self: left;
+	display: flex;
+}
+
+h2 {
+	font-family: "Kavivanar";
+	font-weight: 600;
+	font-style: normal;
+	font-size: 36px;
+	line-height: 100%;
+	letter-spacing: 7%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+h3 {
+	font-family: "Kavivanar";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: 7%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+h4 {
+	font-family: "Kavivanar";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 2px;
+	height: 90%;
+	width: 90%;
+}
+
+span {
+	border: 4px solid #343434;
+	border-radius: 99px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5%;
+}
+
+.card-000 {
+	background-color: black;
+	width: 100%;
+	height: 75vh;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10%;
+}
+
+.card-000-header {
+	background-color: #d9d9d9;
+	border-radius: 12px;
+	width: 95%;
+	height: 8vh;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.dashed-div {
+	border: dashed black 4px;
+	width: 35%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-000-name {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-000-image {
+	margin-top: 5%;
+	border: solid #d9d9d9 5px;
+	width: 90%;
+	height: 37%;
+}
+
+.card-000-img {
+	width: 100%;
+	height: 100%;
+}
+
+.card-000-desc-color {
+	margin-top: 3%;
+	background: radial-gradient(
+		50% 138.22% at 50% 50%,
+		#000000 0%,
+		#0084a8 20%,
+		#0015ff 40%,
+		#000000 60%,
+		#0084a8 80%,
+		#0015ff 100%
+	);
+	width: 90%;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-000-desc {
+	background-color: #d9d9d9;
+	border: 7px solid #000000;
+	border-radius: 10px;
+	height: 95%;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+        gap: 15px;
+	}
+	body {
+		width: 90%;
+		height: 100vh;
+	}
+	header {
+		margin-top: 7%;
+	}
+	.card-000 {
+		width: 100%;
+		height: 90%;
+	}
+	.card-000-header {
+		width: 90%;
+	}
+	span {
+		width: 80vw;
+		height: 10%;
+	}
+	.card-000-desc-color {
+		height: 35%;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+	h3 {
+		font-size: 16px;
+	}
+	h4 {
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	header {
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+	body {
+		width: 95%;
+		height: 100vh;
+	}
+	.card-000 {
+		width: 90%;
+		height: 100%;
+		justify-self: center;
+		align-self: center;
+	}
+	.card-000-header {
+		width: 90%;
+	}
+	span {
+		width: 90vw;
+		height: 10%;
+		margin-bottom: 7%;
+		margin-top: 2%;
+	}
+	.card-000-desc-color {
+		height: 37%;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	h4 {
+		font-size: 14px;
+	}
+}
