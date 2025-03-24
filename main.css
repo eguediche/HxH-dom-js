@@ -169,7 +169,7 @@ span {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
-        gap: 15px;
+		gap: 15px;
 	}
 	body {
 		width: 90%;
@@ -238,10 +238,10 @@ span {
 	}
 
 	h2 {
-		font-size: 32px;
+		font-size: 22px;
 	}
 	h3 {
-		font-size: 22px;
+		font-size: 16px;
 	}
 	h4 {
 		font-size: 14px;

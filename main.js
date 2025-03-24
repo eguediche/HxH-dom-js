@@ -1,36 +1,3 @@
-function creeauto(atacard) {
-const Container = document.querySelector(".container");
-
-const Card = document.createElement("section");
-Card.className = "card-000";
-
-const CardHeader = document.createElement("div");
-CardHeader.className = "card-000-header";
-
-const Dashed1 = document.createElement("div");
-Dashed1.className = "dashed-div";
-
-const CardNum = document.createElement("h2");
-CardNum.className = "card-000-numero";
-
-const CardName = document.createElement("h3");
-CardName.className = "card-000-name";
-
-const Dashed2 = document.createElement("div");
-Dashed2.className = "dashed-div";
-
-const CardImgDiv = document.createElement("div");
-CardImgDiv.className = "card-000-image";
-
-const 
-
-}
-
-
-
-
-
-
 const cards = [
 	{
 		image: "assets/000.png",
@@ -1128,3 +1095,81 @@ const cards = [
 		description: "1040",
 	},
 ];
+
+const Container = document.querySelector(".container");
+
+function creeauto(atacard) {
+	const Card = document.createElement("section");
+	Card.className = "card-000";
+
+	const CardHeader = document.createElement("div");
+	CardHeader.className = "card-000-header";
+
+	const Dashed1 = document.createElement("div");
+	Dashed1.className = "dashed-div";
+
+	const CardNum = document.createElement("h2");
+	CardNum.className = "card-000-numero";
+	CardNum.textContent = atacard.number;
+
+	const CardNameDiv = document.createElement("div");
+	CardNameDiv.className = "card-000-name";
+
+	const CardName = document.createElement("h3");
+	CardName.textContent = atacard.name;
+
+	const Dashed2 = document.createElement("div");
+	Dashed2.className= "dashed-div";
+
+	const CardNiv = document.createElement("h2");
+	CardNiv.className = "card-000-niveau";
+	CardNiv.textContent = atacard.rank;
+
+	const CardImgDiv = document.createElement("div");
+	CardImgDiv.className= "card-000-image";
+
+	const Img = document.createElement("img");
+	Img.className = "card-000-img";
+	Img.src = atacard.image;
+
+	const CardColor = document.createElement("div");
+	CardColor.className = "card-000-desc-color";
+
+	const CardDesc = document.createElement("div");
+	CardDesc.className = "card-000-desc";
+
+	const CardTxt = document.createElement("h4");
+	CardTxt.className = "card-000-txt";
+	CardTxt.textContent = atacard.description;
+
+	Container.appendChild(Card);
+	Card.appendChild(CardHeader);
+	Card.appendChild(CardImgDiv);
+	Card.appendChild(CardColor);
+
+
+	Dashed1.appendChild(CardNum);
+	CardNameDiv.appendChild(CardName);
+	Dashed2.appendChild(CardNiv);
+	
+
+	CardHeader.appendChild(Dashed1);
+	CardHeader.appendChild(CardNameDiv);
+	CardHeader.appendChild(Dashed2);
+
+
+	CardImgDiv.appendChild(Img);
+
+	CardColor.appendChild(CardDesc);
+	CardDesc.appendChild(CardTxt);
+
+	return Card;
+}
+
+for (let i = 0; i < cards.length; i++) {
+	const Card = cards[i];
+
+	const newCard = creeauto(Card);
+
+	Container.appendChild(newCard);
+}
